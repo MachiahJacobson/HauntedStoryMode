@@ -69,5 +69,7 @@ struct JamieRuns: View {
 }
 
 #Preview {
+    @Previewable @State var nameChoice = NameChoice()
     JamieRuns()
+        .environment(nameChoice)
 }

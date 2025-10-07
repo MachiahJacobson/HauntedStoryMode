@@ -36,6 +36,9 @@ struct Option3: View {
             }
             
         }
+        .onAppear {
+            
+        }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Image("myYellow")
             .resizable())

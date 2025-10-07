@@ -38,13 +38,14 @@ struct Option5: View {
                     }
                 if correctAnswer {
                     NavigationLink(destination: Option3()) {
-                        Text("Continue")
-                            .font(.custom("Times New Roman", size: 20,))
-                            .foregroundColor(.white)
-                            .padding()
-                            .frame(width: 200, height: 50)
-                            .background(Color.blue)
-                            .cornerRadius(1)
+                        ZStack {
+                            Image("Yellow")
+                                .border(Color.black, width: 3)
+                            Text("Continue")
+                                .foregroundStyle(.black)
+                                .fontWeight(.bold)
+                                .font(.custom("Times New Roman", size: 26,))
+                        }
                     }
                 }
                 
