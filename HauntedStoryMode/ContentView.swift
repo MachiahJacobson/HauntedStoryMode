@@ -9,13 +9,31 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            ZStack {
+                VStack {
+                    Text("Jack and Jamie decide to take a shortcut home through the woods after a party...")
+                        .font(.custom("Times New Roman", size: 30))
+                        .padding()
+                    VStack {
+                        Image("TwoBoys")
+                            .resizable()
+                            .frame(width: 300, height: 300)
+                            .padding()
+                            .border(Color.black, width: 9)
+                    }
+                    NavigationLink("Go into the Woods") {
+                        ChooseCharacter()
+                    }
+                    .padding(.top, 20)
+
+                }
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Image("myYellow")
+                .resizable())
+            .ignoresSafeArea()
         }
-        .padding()
     }
 }
 
