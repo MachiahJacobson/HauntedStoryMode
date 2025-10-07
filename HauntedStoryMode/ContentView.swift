@@ -7,7 +7,14 @@
 
 import SwiftUI
 
+@Observable
+class NameChoice {
+    var name: String = ""
+}
+
 struct ContentView: View {
+    @State var nameChoice: NameChoice = NameChoice()
+
     var body: some View {
         NavigationStack {
             ZStack {
@@ -33,10 +40,13 @@ struct ContentView: View {
             .background(Image("myYellow")
                 .resizable())
             .ignoresSafeArea()
+            .environment(nameChoice)
         }
     }
 }
 
 #Preview {
+    @Previewable @State var nameChoice = NameChoice()
     ContentView()
+        .environment(nameChoice)
 }

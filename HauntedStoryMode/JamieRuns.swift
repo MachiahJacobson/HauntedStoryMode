@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct JamieRuns: View {
+    @Environment(NameChoice.self) var nameChoice
+    
     var body: some View {
         ZStack {
             VStack {
@@ -52,6 +54,9 @@ struct JamieRuns: View {
                         }
                     }
                 }
+            }
+            .onAppear {
+                nameChoice.name = "Jake"
             }
             
         }

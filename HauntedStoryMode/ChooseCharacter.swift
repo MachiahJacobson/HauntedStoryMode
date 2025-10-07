@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ChooseCharacter: View {
+    
+    @Environment(NameChoice.self) var nameChoice
+
     var body: some View {
         ZStack {
             VStack {
@@ -29,6 +32,7 @@ struct ChooseCharacter: View {
                         }
                         Text("Runs away without hesitation")
                             .font(.system(size: 23))
+                            .multilineTextAlignment(.center)
                     }
                     .frame(width: 100, height: 400)
                     .padding(40)
@@ -47,6 +51,7 @@ struct ChooseCharacter: View {
                     .font(.system(size: 23))
                     .frame(width: 100, height: 400)
                     .padding(40)
+                    .multilineTextAlignment(.center)
                 }
             }
         }
@@ -58,5 +63,7 @@ struct ChooseCharacter: View {
 }
 
 #Preview {
+    @Previewable @State var nameChoice = NameChoice()
     ChooseCharacter()
+        .environment(nameChoice)
 }
