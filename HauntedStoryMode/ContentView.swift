@@ -32,7 +32,9 @@ struct ContentView: View {
                     NavigationLink("Go into the Woods") {
                         ChooseCharacter()
                     }
+                    .font(.custom("Times New Roman", size: 30,))
                     .padding(.top, 20)
+                    .foregroundStyle(.white)
 
                 }
             }

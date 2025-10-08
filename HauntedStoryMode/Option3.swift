@@ -11,7 +11,7 @@ struct Option3: View {
     var body: some View {
         ZStack {
             VStack {
-                Text("Inside the box is a key and a treasure map, you go on the adventure, and find the lost tresure.")
+                Text("Inside the box is a key and a treasure map, you go on the adventure, and find the lost tresure!!!")
                     .font(.custom("Times New Roman", size: 30,))
                     .padding(.horizontal, 84)
                     .multilineTextAlignment(.center)
@@ -34,7 +34,6 @@ struct Option3: View {
                         )
                 }
             }
-            
         }
         .onAppear {
             
@@ -42,7 +41,8 @@ struct Option3: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Image("myYellow")
             .resizable())
-        .ignoresSafeArea()    }
+        .ignoresSafeArea()
+    }
 }
 
 #Preview {
